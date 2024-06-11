@@ -7,6 +7,19 @@ import funkin.save.Save;
  */
 class Preferences
 {
+  #if desktop
+  /**
+   * If enabled, caps the framerate at 60fps
+   * @default `false`
+   */
+  public static var cappedFrames(get, set):Bool;
+
+  static function get_naughtyness():Bool
+  {
+    return Save?.instance?.options?.cappedFrames;
+  }
+  #end
+
   /**
    * Whether some particularly fowl language is displayed.
    * @default `true`

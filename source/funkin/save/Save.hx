@@ -88,6 +88,9 @@ class Save
       options:
         {
           // Reasonable defaults.
+          #if desktop
+          cappedFrames: false,
+          #end
           naughtyness: true,
           downscroll: false,
           flashingLights: true,

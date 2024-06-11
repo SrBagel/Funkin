@@ -49,6 +49,11 @@ class PreferencesMenu extends Page
    */
   function createPrefItems():Void
   {
+    #if desktop
+    createPrefItemCheckbox('Capped Framerate', 'Caps the framerate at 60fps', function(value:Bool):Void {
+      Preferences.naughtyness = value;
+    }, Preferences.naughtyness);
+    #end
     createPrefItemCheckbox('Naughtyness', 'Toggle displaying raunchy content', function(value:Bool):Void {
       Preferences.naughtyness = value;
     }, Preferences.naughtyness);
