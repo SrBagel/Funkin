@@ -14,9 +14,17 @@ class Preferences
    */
   public static var cappedFrames(get, set):Bool;
 
-  static function get_naughtyness():Bool
+  static function get_cappedFrames():Bool
   {
     return Save?.instance?.options?.cappedFrames;
+  }
+
+  static function set_cappedFrames(value:Bool):Bool
+  {
+    var save:Save = Save.instance;
+    save.options.naughtyness = value;
+    save.flush();
+    return value;
   }
   #end
 

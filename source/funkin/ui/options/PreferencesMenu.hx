@@ -50,7 +50,7 @@ class PreferencesMenu extends Page
   function createPrefItems():Void
   {
     #if desktop
-    createPrefItemCheckbox('Capped Framerate', 'Caps the framerate at 60fps', function(value:Bool):Void {
+    createPrefItemCheckbox('Capped Framerate', 'Caps the framerate at 60fps (Will be implemented later)', function(value:Bool):Void {
       Preferences.naughtyness = value;
     }, Preferences.naughtyness);
     #end
