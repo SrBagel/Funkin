@@ -22,7 +22,7 @@ class Preferences
   static function set_cappedFrames(value:Bool):Bool
   {
     var save:Save = Save.instance;
-    save.options.naughtyness = value;
+    save.options.cappedFrames = value;
     save.flush();
     return value;
   }
