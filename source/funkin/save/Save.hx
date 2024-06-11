@@ -961,6 +961,12 @@ typedef SaveScoreTallyData =
 typedef SaveDataOptions =
 {
   /**
+   * If enabled, caps FPS at 60 (Will work later, maybe)
+   * @default `false`
+   */
+  var cappedFrames:Bool;
+
+  /**
    * Whether some particularly fowl language is displayed.
    * @default `true`
    */
